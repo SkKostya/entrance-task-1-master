@@ -1,7 +1,7 @@
 const express = require('express');
 
 const graphqlHTTP = require('express-graphql');
-const { makeExecutableSchema } = require('graphql-tools');
+const {makeExecutableSchema} = require('graphql-tools');
 
 const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
@@ -14,7 +14,7 @@ const schema = makeExecutableSchema({
 });
 
 router.use(graphqlHTTP({
-  schema: schema,
+  schema,
   graphiql: true
 }));
 
